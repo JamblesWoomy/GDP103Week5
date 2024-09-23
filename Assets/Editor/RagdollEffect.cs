@@ -12,6 +12,7 @@ public class RagdollEffect : MonoBehaviour
     void Start()
     {
         Physics.IgnoreLayerCollision(6,7,true);
+        Physics.IgnoreLayerCollision(7, 7, true);
         animator = GetComponent<Animator>();
     }
     void Update()
