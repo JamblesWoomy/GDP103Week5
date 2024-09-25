@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class RagdollEffect : MonoBehaviour
 {
+    public bool spacePressed = false;
     private Animator animator;
     public void RagdollOn()
     {
-        animator.enabled = false;
+        if (spacePressed == true)
+        {
+            animator.enabled = true;
+            spacePressed = true;
+        } else
+        {
+            animator.enabled = false;
+            spacePressed = false;
+        }
     }
     void Start()
     {
+        Physics.IgnoreLayerCollision(7, 7);
         animator = GetComponent<Animator>();
     }
     void Update()
