@@ -88,11 +88,26 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Crouch");
             animator.SetBool("Crouch", true);
-
+            moveSpeed = moveSpeed / 2;
         }
         else if (context.canceled && crouchOn == false)
         {
             animator.SetBool("Crouch", false);
+            moveSpeed = moveSpeed * 2;
+        }
+    }
+
+    public void Sprint(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            moveSpeed = moveSpeed * 2;
+            animator.SetBool("Sprint", true);
+        }
+        else if (context.canceled)
+        {
+            moveSpeed = moveSpeed / 2;
+            animator.SetBool("Sprint", false);
         }
     }
 

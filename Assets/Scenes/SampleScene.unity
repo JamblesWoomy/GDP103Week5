@@ -237,7 +237,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5426428}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: Jump
+        m_MethodName: Crouch
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -247,8 +247,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 0e7a865d-113d-463d-b4a4-b69ffc687a60
-    m_ActionName: Player/Jump[/Keyboard/space]
+    m_ActionId: 3aa43b6b-d411-4a33-92b4-da6d7d24a855
+    m_ActionName: Player/Crouch[/Keyboard/leftCtrl]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5426428}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Sprint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0d9c56fd-09a8-4509-b610-5c61adbec46d
+    m_ActionName: Player/Run[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -294,7 +310,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5426426}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1224dc176d00e474bb07439cbbac9d89, type: 3}
   m_Name: 
@@ -456,7 +472,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 112800848}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.1239283
   m_Height: 0.4957132
   m_Direction: 1
@@ -1716,7 +1732,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1063892890}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.12392884
   m_Height: 0.49571535
   m_Direction: 1
