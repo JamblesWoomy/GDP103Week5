@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private float gravity = -9.81f;
     [SerializeField] private float gravityMultiplier = 3.0f;
     private float velocity;
+    private bool crouchOn;
 
     void Awake()
     {
@@ -82,12 +83,14 @@ public class Player : MonoBehaviour
 
     public void Crouch(InputAction.CallbackContext context)
     {
-        Debug.Log("Crouch");
-        if (context.started)
+        crouchOn = !crouchOn;
+        if (context.started && crouchOn == true)
         {
+            Debug.Log("Crouch");
             animator.SetBool("Crouch", true);
+
         }
-        else if (context.canceled)
+        else if (context.canceled && crouchOn == false)
         {
             animator.SetBool("Crouch", false);
         }
