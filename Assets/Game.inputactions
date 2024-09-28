@@ -33,18 +33,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Fall",
+                    "name": "Flair",
                     "type": "Button",
-                    "id": "99849689-53dc-48eb-afd8-3b7243022c82",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Breakdance",
-                    "type": "Button",
-                    "id": "eec90ff7-c3ed-47e7-bf95-e30fcf9d024f",
+                    "id": "295aa368-163c-464c-baf7-c2980a7acff1",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -274,23 +265,12 @@
                 },
                 {
                     "name": "",
-                    "id": "0fbabdcc-cb44-4909-97a7-bf88531fec96",
-                    "path": "<Keyboard>/1",
+                    "id": "b23784ee-c17f-4ec1-aaa6-58d128b4edfb",
+                    "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Fall",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "83c38787-244a-4004-aad5-ad6b6dc88bc0",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Breakdance",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Flair",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
