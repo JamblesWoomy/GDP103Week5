@@ -26,7 +26,7 @@ public class RagdollEffect : MonoBehaviour
     void Update()
     {
         //On SPACE turn on the ragdoll.
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             RagdollOn();
         }

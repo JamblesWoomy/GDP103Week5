@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     }
     private void ApplyGravity()
     {
-        if (characterController.isGrounded)
+        if (IsGrounded())
         {
             velocity = -1.0f;
         }
@@ -80,9 +80,24 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Crouch(InputAction.CallbackContext context)
+    {
+        Debug.Log("Crouch");
+        if (context.started)
+        {
+            animator.SetBool("Crouch", true);
+        }
+        else if (context.canceled)
+        {
+            animator.SetBool("Crouch", false);
+        }
+    }
+
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
         direction = new Vector3(moveInput.x, 0.0f, moveInput.y);
     }
+
+    private bool IsGrounded() => characterController.isGrounded;
 }
