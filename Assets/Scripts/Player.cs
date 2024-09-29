@@ -73,11 +73,11 @@ public class Player : MonoBehaviour
     {
         if (context.started)
         {
-            animator.SetBool("Flair", true);
+            animator.SetBool("Taunt", true);
         }
         else if (context.canceled)
         {
-            animator.SetBool("Flair", false);
+            animator.SetBool("Taunt", false);
         }
     }
 
