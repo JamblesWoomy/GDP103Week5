@@ -18,8 +18,8 @@ public class Player : MonoBehaviour //controls all player input events and anima
     private float velocity;
     private bool crouchOn;
 
-    [SerializeField]
-    private Guns gun;
+    //[SerializeField]
+    public GameObject gunObject;
 
     void Awake()
     {
@@ -108,19 +108,17 @@ public class Player : MonoBehaviour //controls all player input events and anima
         }
     }
     
-    public void OnShoot(InputAction.CallbackContext context)// changes the player's walking and idle animations and increases the movement speed
+    public void Shoot(InputAction.CallbackContext context)// plays the shooting animation and runs the respective function when the respective input is pressed
     {
-        gun.Shoot();
-        /*if (context.started)
+        if (context.started)
         {
-            moveSpeed = moveSpeed * 2;
-            animator.SetBool("Sprint", true);
+            gunObject.GetComponent<RaycastTutorial>().Fire();
+            animator.SetBool("Shoot", true);
         }
         else if (context.canceled)
         {
-            moveSpeed = moveSpeed / 2;
-            animator.SetBool("Sprint", false);
-        }*/
+            animator.SetBool("Shoot", false);
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)//processes the player's movement based on the WASD input
